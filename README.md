@@ -32,9 +32,9 @@ Run `py.test` in the main folder.
 ## TODO
 - [x] Two tabs, two different users.
 - [ ] Allow registered users only.
-- [ ] Handle `/stock` messages.
+- [x] Handle `/stock` messages.
 - [ ] Decoupled bot.
-- [ ] Parse received CSV.
+- [x] Parse received CSV.
 - [x] Order messages by timestamps.
 - [ ] Show only 50 last messages.
 - [x] Unit testing.

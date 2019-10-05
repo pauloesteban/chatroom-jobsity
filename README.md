@@ -1,4 +1,4 @@
-# Chatroom
+# Chatroom Challenge
 
 This project is implemented using Python 3.4.x. For Mac users consider installing [pyenv](https://github.com/pyenv/pyenv) and [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
 
@@ -24,6 +24,9 @@ localhost:5000
 ```
 Currently, this was tested on Google Chrome.
 
+## Unit testing using PyTest
+Run `py.test` in the main folder.
+
 ## TODO
 - [x] Two tabs, two different users.
 - [ ] Allow registered users only.
@@ -31,9 +34,11 @@ Currently, this was tested on Google Chrome.
 - [ ] Decoupled bot.
 - [ ] Parse received CSV.
 - [ ] Ordering messages.
-- [ ] Unit testing.
+- [x] Unit testing.
 - [ ] Stock command won't be saved on the database.
 - [x] Simple front-end.
 
 ## Branches
-`master` branch contains the latest working chatroom. `develop` branch is experimental and have work in progress features.
+`master` branch contains the latest working chatroom. `develop` branch is experimental.
+
+Additional branches have work-in-progress features. Please do pull requests (PR) to `develop` first.

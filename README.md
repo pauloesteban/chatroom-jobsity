@@ -33,7 +33,8 @@ Run `py.test` in the main folder.
 - [ ] Handle `/stock` messages.
 - [ ] Decoupled bot.
 - [ ] Parse received CSV.
-- [ ] Ordering messages.
+- [x] Order messages by timestamps.
+- [ ] Show only 50 last messages.
 - [x] Unit testing.
 - [ ] Stock command won't be saved on the database.
 - [x] Simple front-end.

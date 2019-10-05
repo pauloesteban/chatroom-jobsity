@@ -13,6 +13,17 @@ or in the home folder
 pip install -r requirements.txt
 ```
 
+## Usage
+Execute on terminal:
+```
+python main.py
+```
+Open in your browser:
+```
+localhost:5000
+```
+Currently, this was tested on Google Chrome.
+
 ## TODO
 - [x] Two tabs, two different users.
 - [ ] Allow registered users only.

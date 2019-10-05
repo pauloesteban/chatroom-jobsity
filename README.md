@@ -1,5 +1,6 @@
 # Chatroom Challenge
 
+![Chatroom main window](https://github.com/pauloesteban/chatroom-jobsity/blob/master/files/mainwindow.png)
 This project is implemented using Python 3.4.x. For Mac users consider installing [pyenv](https://github.com/pyenv/pyenv) and [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
 
 ## Requirements

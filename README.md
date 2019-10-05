@@ -25,4 +25,4 @@ pip install -r requirements.txt
 - [x] Simple front-end.
 
 ## Branches
-`master` branch contains the latest working chatroom. `develop` branch is experimental and work in progress features.
+`master` branch contains the latest working chatroom. `develop` branch is experimental and have work in progress features.

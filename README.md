@@ -36,7 +36,7 @@ Run `py.test` in the main folder.
 - [x] Unit testing.
 - [x] Simple front-end.
 - [ ] Allow registered users only.
-- [ ] Handle `/stock` messages.
+- [x] Handle `/stock` messages.
 - [ ] Decoupled bot.
 - [ ] Parse received CSV.
 - [ ] Stock command won't be saved on the database.

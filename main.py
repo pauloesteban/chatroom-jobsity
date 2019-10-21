@@ -29,6 +29,7 @@ def messageReceived(methods=['GET', 'POST']):
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
+    '''
     try:
         symbol_query = json['message']
         if symbol_query.startswith('/stock='):
@@ -36,9 +37,12 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
             stock_code = re.split(pattern, symbol_query)
             result = stock_share(stock_code[-1])
     except KeyError:
-        print("No message in event")
+        print("No message in event")    
     finally:
-        socketio.emit('my response', json, callback=messageReceived)
+    
+'''
+    socketio.emit('my response', json, callback=messageReceived)
+        
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)

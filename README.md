@@ -32,6 +32,13 @@ Currently tested on Google Chrome.
 ## Unit testing using PyTest
 Run `py.test` in the main folder.
 
+## Database
+DB was generated using:
+```
+from chatroom_jobsity import db, create_app
+db.create_all(app=create_app())
+```
+
 ## TODO
 - [x] Two tabs, two different users.
 - [x] Order messages by timestamps.

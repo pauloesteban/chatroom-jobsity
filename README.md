@@ -1,6 +1,6 @@
 # Chatroom Challenge
 
-This project is implemented using Python 3.4.x. For Mac users consider installing [pyenv](https://github.com/pyenv/pyenv) and [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
+This project is implemented using Python 3.7.x. For Mac users consider installing [pyenv](https://github.com/pyenv/pyenv) and [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
 
 ## Requirements
 Flask and SocketIO are required. You can install via
@@ -22,7 +22,7 @@ Open in your browser:
 ```
 localhost:5000
 ```
-Currently, this was tested on Google Chrome.
+Currently tested on Google Chrome.
 
 ## Unit testing using PyTest
 Run `py.test` in the main folder.

@@ -18,7 +18,10 @@ pip install -r requirements.txt
 ## Usage
 Execute on terminal:
 ```
-python main.py
+cd ..
+export FLASK_APP=chatroom-jobsity
+export FLASK_DEBUG=1
+flask run
 ```
 Open in your browser:
 ```

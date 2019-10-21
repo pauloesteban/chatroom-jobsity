@@ -4,14 +4,17 @@
     <title>Chatroom</title>
 </head>
 <body>
-    <h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
-    <div class="message_holder"></div>
-
+    <h2 style='color: #000;font-size: 30px;'>Jobsity Chatroom</h3>
+    <hr>
     <form action="" method="POST">
       <input type="text" class="username" placeholder="User Name"/>
       <input type="text" class="message" placeholder="Messages"/>
       <input type="submit"/>
     </form>
+    <hr>
+    <h3 style='color: #ccc;font-size: 20px;'>No message yet..</h3>
+
+    <div class="message_holder"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -20,6 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     
     <script type="text/javascript">
+      var maxnumbermessages = 50
     // Establish the connection and create session  
       var socket = io.connect('http://' + document.domain + ':' + location.port);
       socket.on( 'connect', function() {
@@ -39,12 +43,17 @@
       } )
       socket.on( 'my response', function( msg ) {
         console.log( msg )
-        if( typeof msg.user_name !== 'undefined' ) {
-          var date = new Date();
-          var datestamp = date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear()
-          var timestamp = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()
+        if( typeof msg.user_name !== 'undefined') {
           $( 'h3' ).remove()
-          $( 'div.message_holder' ).append( '<div>'+datestamp+' '+timestamp+' <b style="color: #000">'+msg.user_name+'</b> '+msg.message+'</div>' )
+          let date = new Date();
+          let datestamp = date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear()
+          let timestamp = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()
+          let messageline = datestamp+' '+timestamp+'  '+msg.user_name+': '+msg.message
+          $( 'div.message_holder' ).append( '<div>'+messageline+'</div>' )
+          var n = $( 'div' ).length;
+          if ( n > maxnumbermessages + 1 ) {
+            $( 'div.message_holder' ).find( ':first-child' ).remove()
+          }
         }
       })
     </script>

@@ -29,19 +29,24 @@ def messageReceived(methods=['GET', 'POST']):
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
-    '''
+    
     try:
         symbol_query = json['message']
         if symbol_query.startswith('/stock='):
             pattern='/stock='
             stock_code = re.split(pattern, symbol_query)
             result = stock_share(stock_code[-1])
+            botMessage = {'user_name': 'BOT', 'message': result}
+            socketio.emit('my response', botMessage, callback=messageReceived)
+            json = {}
     except KeyError:
-        print("No message in event")    
+        print("No message in event")
+    except:
+        botMessage = {'user_name': 'BOT', 'message': 'No data for that query'}
+        json = {}
+        socketio.emit('my response', botMessage, callback=messageReceived)
     finally:
-    
-'''
-    socketio.emit('my response', json, callback=messageReceived)
+        socketio.emit('my response', json, callback=messageReceived)
         
 
 if __name__ == '__main__':

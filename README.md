@@ -35,11 +35,11 @@ Run `py.test` in the main folder.
 - [x] Show only 50 last messages.
 - [x] Unit testing.
 - [x] Simple front-end.
-- [ ] Allow registered users only.
 - [x] Handle `/stock` messages.
-- [ ] Decoupled bot.
-- [ ] Parse received CSV.
-- [ ] Stock command won't be saved on the database.
+- [x] Parse received CSV.
+- [x] Stock command won't be saved on the database.
+- [ ] Use message broker.
+- [ ] Allow registered users only.
 
 ## Branches
 `master` branch contains the latest working chatroom. `develop` branch is experimental.

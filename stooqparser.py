@@ -12,9 +12,7 @@ def stock_share(stock_code):
             symbol = row[0]
             closePerShare = row[-2]
             if closePerShare == 'N/D':
-                raise Exception('No data!')
+                raise Exception('No data')
             message = symbol + ' quote is $' + closePerShare + ' per share'
             return message
         line_count += 1
-
-stock_code_apple= 'appl.us'
